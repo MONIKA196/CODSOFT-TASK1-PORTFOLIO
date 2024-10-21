@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="port2.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- Navbar -->
+        <div class="navbar">
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">HOME</a></li>
+                <li><a href="#about" onclick="showSection('about')">ABOUT</a></li>
+                <li><a href="#skills" onclick="showSection('skills')">SKILLS</a></li>
+                <li><a href="#resume" onclick="showSection('resume')">RESUME</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <!-- Profile Image Section near Navbar -->
+        <div class="profile-section">
+            <div class="welcome-text">
+                <h1>Welcome to My Portfolio</h1>
+            </div>
+            <div class="profile-img-container">
+                <img src="C:\Users\monik\Downloads\monika.jpg" alt="Profile picture of Monika" class="profile-img">
+            </div>
+        </div>
+
+        <!-- Home Section -->
+        <div id="home" class="section home-section active">
+            <div class="info centered">
+                <h1 class="animated-welcome">Hello I'm <span class="animated-name">MONIKA</span></h1>
+                <p>Data Science Student | UI Enthusiast</p>
+            </div>
+        </div>
+
+        <!-- About Section (White Background) -->
+        <section id="about" class="section white-bg">
+            <h2>About Me</h2>
+            <ul>
+                <li>I am currently pursuing my BTECH in Artificial Intelligence and Data Science at Bannari Amman Institute of Technology (2023-2027). My areas of interest include Animation and UI/UX design. I have developed proficiency in Python, C, Linux, and Blender (AR & VR). I have presented a paper on a Fingerprint Door Unlock system and participated in an Ideathon with a Feelings Detecting Application. Additionally, I am a member of IAENG and have been recognized with a district prize in a general knowledge exam.</li>
+            </ul>
+        </section>
+
+        <!-- Skills Section (White Background) -->
+        <section id="skills" class="section white-bg">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages: Python, C</li>
+                <li>Operating Systems: Linux</li>
+                <li>Design Tools: Blender (AR & VR)</li>
+                <li>Languages: Tamil, English, Hindi, Basic German</li>
+                <li>Other Skills: Animation, UI/UX Design</li>
+                <li>Framework: Component-based UI development</li>
+            </ul>
+        </section>
+
+        <!-- Resume Section (White Background) -->
+        <section id="resume" class="section white-bg">
+            <h2>Resume</h2>
+            <h3 class="orange-heading">PROJECTS</h3>
+            <p>Fingerprint Door Unlock System: Presented a paper on a security system using fingerprints to unlock doors.</p>
+            <p>Feelings Detecting Application: Submitted an idea at an ideathon, using AI for human emotions detection.</p>
+
+            <h3 class="orange-heading">TECHNICAL SKILLS SHOWCASED</h3>
+            <p>Blender (AR & VR): Designed and animated 3D models for virtual reality experiences.</p>
+            <p>Component Based UI Development: Focused on UI development using modern frameworks and libraries.</p>
+
+            <h3 class="orange-heading">IAENG PROFESSIONAL MEMBERSHIP</h3>
+            <p>IAENG Member: Actively involved in professional communities to stay updated on industry trends.</p>
+
+            <a href="C:\Users\monik\OneDrive\ドキュメント\UPDATED RESUME.pdf" class="resume-download" target="_blank"> Resume</a>
+        </section>
+
+        <!-- Contact Section (White Background) -->
+        <section id="contact" class="section white-bg">
+            <h2>Contact</h2>
+            <p>Email: monikanagalingamn@gmail.com</p>
+            <p>Phone +91 9965821849</p>
+            <p>Connect with me:</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="social-link">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.VoNPl1Afksu-fgAKZbw1DQAAAA&pid=Api&P=0&h=180" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://github.com/MONIKA196" target="_blank" class="social-link">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.2xEP0WfziRNK-snbN9IOggHaHa&pid=Api&P=0&h=180" alt="GitHub" class="social-icon">
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript for Dynamic Section Display with Blur Effect -->
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+                section.style.animation = '';
+            });
+
+            var currentSection = document.getElementById(sectionId);
+            currentSection.classList.add('active');
+            currentSection.style.animation = 'blurFadeIn 1s forwards';
+        }
+    </script>
+</body>
+</html>
